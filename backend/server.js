@@ -16,6 +16,12 @@ mongoose.connect(uri)
     .catch((err) => console.error("MongoDB connection error:", err));
 
 
+
+app.get('/', (req, res)=>{
+    res.status(200).json({"status":true, "message":"server working.."});
+})    
+
+
 app.post('/companies', async (req, res) => {
     try {
         const company = new Companies(req.body);
