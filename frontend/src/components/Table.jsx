@@ -10,9 +10,9 @@ import { Search, Funnel } from 'lucide-react'
 const Index = ({ tableColumns, tableData, setSearchQuery, searchQuery, modelHandler, resetFilters }) => {
     return (
         <div className="overflow-hidden rounded-sm border p-6 border-gray-200 bg-white  ">
-            <div className="flex justify-between items-center mb-4">
+            <div className="flex-col sm:flex-row flex justify-between sm:items-center gap-2 mb-4">
                 <h1 className="text-lg font-semibold text-gray-800 dark:text-white/90">Companies Directory</h1>
-                <div className="flex items-center gap-5">
+                <div className="flex-col sm:flex-row flex sm:items-center gap-5">
                     <div className="relative">
                         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                         <input
@@ -23,6 +23,7 @@ const Index = ({ tableColumns, tableData, setSearchQuery, searchQuery, modelHand
                             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                         />
                     </div>
+                    <div className="flex justify-between gap-4">
                     <button onClick={modelHandler} className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-theme-sm font-medium text-gray-700 shadow-theme-xs hover:bg-gray-50 hover:text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 ">
                         <Funnel className="size-5" />
                         Filter
@@ -30,6 +31,8 @@ const Index = ({ tableColumns, tableData, setSearchQuery, searchQuery, modelHand
                     <button onClick={resetFilters} className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-theme-sm font-medium text-gray-700 shadow-theme-xs hover:bg-gray-50 hover:text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400">
                        Reset Filter
                     </button>
+                    </div>
+                   
                 </div>
 
             </div>
