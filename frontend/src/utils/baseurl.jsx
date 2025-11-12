@@ -1,1 +1,1 @@
-export const BASE_URL = 'http://localhost:3000/api';
+export const BASE_URL = 'https://companies-directory-gxb6.onrender.com/api';
